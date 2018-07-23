@@ -33,4 +33,13 @@ for filename in glob.iglob( indir + '/**/*.zip', recursive=True):
     extract_zip = "unzip " + filename + " -d " + outdir
     os.system(extract_zip)
 
-    
+
+
+for filename in glob.iglob( indir + '/**/*.7z', recursive=True):
+    print("Extracting " + filename)
+
+
+    extract_7z = "7z x -t7z " + filename + " -o" + outdir
+    os.system(extract_7z)
+
+        
